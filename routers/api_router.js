@@ -18,7 +18,7 @@ router.post('/createUser', async (req, res) => {
 });
 
 
-// Create a New User
+// Create a New Group
 router.post('/createGroup', async (req, res) => {
     let { name, members } = req.body;
     if(!(name && Array.isArray(members) && members.length)) return res.status(400).json({ error: 'Bad Request!' });
